@@ -1,0 +1,210 @@
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #DB3535;
+    color:#0C1419;
+}
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 215px;
+    margin: 0;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4em;
+}
+
+h1.numero-h1 {
+    z-index:999;
+    letter-spacing: -30px;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+}
+h1.white-h1 {
+    letter-spacing: -0.05em;
+    color: #FBDFD3;
+}
+
+#main-contain {
+    width: 100%;
+    height: auto;
+}
+
+#mainlayer {
+    max-width: 1252px;
+    margin: 0 auto;
+    padding: 44px 47px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows: repeat(12, 124px);
+    column-gap: 7px;
+    row-gap: 29px;
+}
+
+.grid-item {
+    /*background-color: #FB8385;*/
+    width: 100%;
+    min-height: auto;
+}
+/* PRIMER TEXTO */
+.grid-item:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+/* IMAGEN PRINCIPAL LEFT */
+.grid-item:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 7;
+    padding-right: 18px;
+}
+.image-big {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode:multiply;
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+}
+.image-big:hover {
+    transform: rotate(-12deg) scale(1.05);
+    -webkit-transform: rotate(-12deg) scale(1.05);
+}
+.image-big.toleft:hover {
+    transform: rotate(12deg) scale(1.05);
+    -webkit-transform: rotate(12deg) scale(1.05);
+}
+/* IMAGEN PRINCIPAL RIGHT */
+.grid-item:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 7;
+}
+/* TEXTO 11 */
+.grid-item:nth-child(4) {
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    padding-bottom: 77px;
+}
+.circle-SVG {
+    position: absolute;
+    top:20px;
+    z-index: -100;
+    transform: scale(0.5);
+    transform-origin: center center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.grid-item:nth-child(4):hover .circle-SVG {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.grid-item:nth-child(4):hover h1.numero-h1 {
+    color: #FBDFD3;
+    cursor: pointer;
+}
+
+/* TEXTO WERK */
+.grid-item:nth-child(5) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    padding-bottom: 77px;
+}
+/* LINE + TEXT */
+.grid-item:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    grid-row-end: 13;
+}
+
+/* GRID INSIDE GRID */
+.grid2-text {
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(4, auto);
+    column-gap: 7px;
+    row-gap: 16px;
+}
+
+/* FR */
+.grid2-item:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/* NOVEMBER */
+.grid2-item:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/* FORM... */
+.grid2-item:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/* LINE DIVIDER INSIDE */
+.grid2-item:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+/* Texto FORM... */
+.grid2-item:nth-child(5) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-bottom: 16px;
+}
+/* LINE-4/5 */
+.grid2-item:nth-child(6) {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+/* Creditos Final */
+.grid2-item:nth-child(7) {
+    margin-top: -16px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.line-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #0C1419;
+    margin-bottom: 16px;
+}
